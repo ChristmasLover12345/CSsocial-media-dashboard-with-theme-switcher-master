@@ -1,33 +1,90 @@
+import { useState } from "react";
+import "./App.css";
 
-import { useState } from 'react'
-import './App.css'
-import Test1 from './components/test1'
-import Test2 from './components/test2'
+import Darkcard from "./components/Darkcard";
+import Lightmode from "./components/Lightmode";
 
 function App() {
-  const [bottomBg, setbottomBg] = useState('bg-[#1e202a] h-full w-full -z-10 relative')
-  const [topBg, setTopBg] = useState('bg-[#1f212e] h-[30%] w-full absolute top-0 ')
+  const [bottomBg, setbottomBg] = useState(
+    "bg-[#1e202a] min-h-screen w-full relative"
+  );
+  const [topBg, setTopBg] = useState(
+    "bg-[#1f212e] h-[30vh] w-full absolute top-0 "
+  );
 
-  const [testing, setTesting] = useState(Test1)
+  const[title, setTitle] = useState("text-white text-[28px] sm:text-4xl font-bold")
 
+  const [mode, setMode] = useState("dark");
+
+  const Toggle = () => {
+    
+    
+
+    if (mode === "dark")
+    {
+      setMode("light");
+      setbottomBg("bg-white min-h-screen w-full relative")
+      setTopBg("bg-[#f5f7ff] h-[30vh] w-full absolute top-0 ")
+      setTitle("text-[28px] sm:text-4xl font-bold")
+    }
+    else
+    {
+      setMode("dark");
+      setbottomBg("bg-[#1e202a] min-h-screen w-full relative")
+      setTopBg("bg-[#1f212e] h-[30vh] w-full absolute top-0 ")
+      setTitle("text-white text-[28px] sm:text-4xl font-bold")
+    }
+  };
 
   return (
     <>
-     <div className='w-screen h-screen flex flex-col relative'>
       {/* Background */}
-      <div className={bottomBg}>
-        <div className={topBg}> 
+      <div className="fixed  inset-0 -z-10">
+        <div className={bottomBg}>
+          <div className={topBg}></div>
         </div>
       </div>
 
-      <div>
-        {testing}
-      </div>
-      
 
-     </div>
+
+
+
+    <div className="w-screen min-h-screen flex flex-col items-center z-20">
+
+      <div className="flex flex-col sm:flex-row sm:items-center w-[90%] sm:w-[80%] justify-between mt-10">
+        <div>
+          <h1 className={title}>Social Media Dashboard</h1>
+          <h6 className="text-gray-400 font-semibold">Total Followers: 23,004</h6>
+          <div className="block sm:hidden w-full h-[1px] my-5 bg-gray-400"></div>
+
+        </div>
+
+        <label className="inline-flex items-center cursor-pointer w-full sm:w-[40%]">
+        <div className=" flex flex-row justify-between self-center sm:place-content-end w-full ">
+        <span className="text-gray-400 hover:text-white me-3 font-bold">Dark Mode</span>
+
+          <input type="checkbox" value="" className="sr-only peer sm:justify-slef-end" />
+          <div onClick={Toggle}
+            className="relative w-11 h-6 rounded-full bg-gradient-to-r from-[#378fe6] to-[#3eda82] 
+            transition-all before:absolute before:top-[2px] before:start-[2px] before:h-5 before:w-5 
+            before:rounded-full before:border before:border-gray-300 before:bg-[#1f212e] 
+            peer-checked:before:bg-white peer-checked:before:translate-x-full 
+            rtl:peer-checked:before:translate-x-0"
+          ></div>
+
+          </div>
+
+        </label>
+      </div>
+
+      <div className="relative flex flex-col items-center w-full sm:w-[80%]">
+        {mode === "dark" ? <Darkcard /> : <Lightmode />}
+      </div>
+
+
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
