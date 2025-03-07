@@ -5,9 +5,9 @@ const Darkcard = () => {
     <>
 
       {/* These are the top cards */}
-      <div className="flex flex-col items-center sm:flex-row sm:items-center justify-between w-full mt-[3.75rem] mb-4">
+      <div className="flex flex-col items-center sm:grid sm:grid-cols-2 lg:flex lg:flex-row lg:items-center justify-between w-full mt-[3.75rem] mb-4">
 
-        <div className="h-[250px] sm:w-[270px] w-[90%] border-t-4 border-[#198ff5] bg-[#252a41] hover:bg-[#384063] flex flex-col items-center rounded-md sm:mb-0 mb-4">
+        <div className="h-[250px] sm:w-[270px] w-[90%] border-t-4 border-[#198ff5] bg-[#252a41] hover:bg-[#384063] sm:justify-self-center flex flex-col items-center rounded-md lg:mb-0 mb-4">
           <div className="flex mt-7">
             <img src="../../images/icon-facebook.svg" alt="Facebook logo" />
             <span className="text-gray-400 ms-2"> @nathanf</span>
@@ -27,7 +27,7 @@ const Darkcard = () => {
         </div>
 
 
-        <div className="h-[250px] sm:w-[270px] w-[90%] border-t-4 border-[#1ca0f2] bg-[#252a41] hover:bg-[#384063] flex flex-col items-center rounded-md sm:mb-0 mb-4">
+        <div className="h-[250px] sm:w-[270px] w-[90%] border-t-4 border-[#1ca0f2] bg-[#252a41] hover:bg-[#384063] sm:justify-self-center flex flex-col items-center rounded-md lg:mb-0 mb-4">
           <div className="flex mt-7">
             <img src="../../images/icon-twitter.svg" alt="twitter logo" />
             <span className="text-gray-400 ms-2"> @nathanf</span>
@@ -47,7 +47,7 @@ const Darkcard = () => {
         </div>
 
         {/* Sorry if this one looks weird, couldnt find a way to make the border gradient so i had to wrap it around another div and give that one the gradient background */}
-        <div className="sm:w-[269px] w-[90%] h-[250px] rounded-md bg-gradient-to-r relative from-[#fdc468] to-[#df4996] sm:mb-0 mb-4">
+        <div className="sm:w-[269px] w-[90%] h-[250px] rounded-md bg-gradient-to-r relative sm:justify-self-center from-[#fdc468] to-[#df4996] sm:mb-0 mb-4">
         <div className="h-[247px] sm:w-[270px] w-[100%] bg-[#252a41] hover:bg-[#384063] flex flex-col items-center rounded-md absolute bottom-0">
           <div className="flex mt-7">
             <img src="../../images/icon-instagram.svg" alt="instagram logo" />
@@ -69,7 +69,7 @@ const Darkcard = () => {
         </div>
 
         
-        <div className="h-[250px] sm:w-[270px] w-[90%] border-t-4 border-[#c4032a] bg-[#252a41] hover:bg-[#384063] flex flex-col items-center rounded-md sm:mb-0 mb-4">
+        <div className="h-[250px] sm:w-[270px] w-[90%] border-t-4 border-[#c4032a] bg-[#252a41] hover:bg-[#384063] sm:justify-self-center flex flex-col items-center rounded-md sm:mb-0 mb-4">
           <div className="flex mt-7">
             <img src="../../images/icon-youtube.svg" alt="twitter logo" />
             <span className="text-gray-400 ms-2"> @nathanf</span>
@@ -96,9 +96,9 @@ const Darkcard = () => {
       <h1 className="text-white self-start text-3xl font-bold my-8">Overview - Today</h1>
       </div>
       {/* Bottom cards */}
-      <div className="flex flex-col items-center sm:flex-row justify-between w-[90%] sm:w-full">
+      <div className="flex flex-col items-center sm:grid sm:grid-cols-2 lg:flex lg:flex-row justify-between w-[90%] sm:w-full">
 
-      <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 sm:mb-0 flex flex-col items-center hover:bg-[#384063] rounded-md">
+      <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 lg:mb-0 flex flex-col items-center hover:bg-[#384063] sm:justify-self-center rounded-md">
 
         <div className="flex w-[85%] justify-between sm:w-[75%] mt-6">
           <p className="text-gray-400 font-bold">Page Views</p>
@@ -119,7 +119,7 @@ const Darkcard = () => {
 
       </div>
 
-      <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 sm:mb-0 flex flex-col items-center hover:bg-[#384063] rounded-md">
+      <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 lg:mb-0 flex flex-col items-center hover:bg-[#384063] sm:justify-self-center rounded-md">
 
         <div className="flex w-[85%] justify-between sm:w-[75%] mt-6">
           <p className="text-gray-400 font-bold">Likes</p>
@@ -140,7 +140,7 @@ const Darkcard = () => {
 
       </div>
 
-      <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 sm:mb-0 flex flex-col items-center hover:bg-[#384063] rounded-md">
+      <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 lg:mb-0 flex flex-col items-center hover:bg-[#384063] sm:justify-self-center rounded-md">
 
         <div className="flex w-[85%] justify-between sm:w-[75%] mt-6">
           <p className="text-gray-400 font-bold">Likes</p>
@@ -161,7 +161,7 @@ const Darkcard = () => {
 
       </div>
 
-      <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 sm:mb-0 flex flex-col items-center hover:bg-[#384063] rounded-md">
+      <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 lg:mb-0 flex flex-col items-center hover:bg-[#384063] sm:justify-self-center rounded-md">
 
         <div className="flex w-[85%] justify-between sm:w-[75%] mt-6">
           <p className="text-gray-400 font-bold">Profile Views</p>
@@ -185,9 +185,9 @@ const Darkcard = () => {
 
       </div>
       {/* Bottom cards second row */}
-      <div className="flex flex-col items-center sm:flex-row justify-between w-[90%] sm:w-full sm:mt-9">
+      <div className="flex flex-col items-center sm:grid sm:grid-cols-2 lg:flex lg:flex-row justify-between w-[90%] sm:w-full lg:mt-9">
 
-        <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 sm:mb-0 flex flex-col items-center hover:bg-[#384063] rounded-md">
+        <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 lg:mb-0 flex flex-col items-center hover:bg-[#384063] sm:justify-self-center rounded-md">
 
           <div className="flex w-[85%] justify-between sm:w-[75%] mt-6">
             <p className="text-gray-400 font-bold">Retweets</p>
@@ -208,7 +208,7 @@ const Darkcard = () => {
 
         </div>
 
-        <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 sm:mb-0 flex flex-col items-center hover:bg-[#384063] rounded-md">
+        <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 lg:mb-0 flex flex-col items-center hover:bg-[#384063] sm:justify-self-center rounded-md">
 
           <div className="flex w-[85%] justify-between sm:w-[75%] mt-6">
             <p className="text-gray-400 font-bold">Likes</p>
@@ -229,7 +229,7 @@ const Darkcard = () => {
 
         </div>
 
-        <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 sm:mb-0 flex flex-col items-center hover:bg-[#384063] rounded-md">
+        <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 lg:mb-0 flex flex-col items-center hover:bg-[#384063] sm:justify-self-center rounded-md">
 
           <div className="flex w-[85%] justify-between sm:w-[75%] mt-6">
             <p className="text-gray-400 font-bold">Likes</p>
@@ -250,7 +250,7 @@ const Darkcard = () => {
 
         </div>
 
-        <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 sm:mb-0 flex flex-col items-center hover:bg-[#384063] rounded-md">
+        <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 lg:mb-0 flex flex-col items-center hover:bg-[#384063] sm:justify-self-center rounded-md">
 
           <div className="flex w-[85%] justify-between sm:w-[75%] mt-6">
             <p className="text-gray-400 font-bold">Total Views</p>
