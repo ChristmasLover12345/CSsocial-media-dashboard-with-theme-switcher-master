@@ -3,7 +3,9 @@ import React from "react";
 const Darkcard = () => {
   return (
     <>
-      <div className="flex flex-col items-center sm:flex-row sm:items-center justify-between w-full mt-[3.75rem]">
+
+      {/* These are the top cards */}
+      <div className="flex flex-col items-center sm:flex-row sm:items-center justify-between w-full mt-[3.75rem] mb-4">
 
         <div className="h-[250px] sm:w-[270px] w-[90%] border-t-4 border-[#198ff5] bg-[#252a41] hover:bg-[#384063] flex flex-col items-center rounded-md sm:mb-0 mb-4">
           <div className="flex mt-7">
@@ -88,6 +90,190 @@ const Darkcard = () => {
 
 
       </div>
+
+      {/* bottom cards tittle */}
+      <div className="w-[90%] sm:w-full">
+      <h1 className="text-white self-start text-3xl font-bold my-8">Overview - Today</h1>
+      </div>
+      {/* Bottom cards */}
+      <div className="flex flex-col items-center sm:flex-row justify-between w-[90%] sm:w-full">
+
+      <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 sm:mb-0 flex flex-col items-center hover:bg-[#384063] rounded-md">
+
+        <div className="flex w-[85%] justify-between sm:w-[75%] mt-6">
+          <p className="text-gray-400 font-bold">Page Views</p>
+          <img src="../../images/icon-facebook.svg" alt="Facebook logo" />
+        </div>
+
+        <div className="flex w-[85%] justify-between sm:w-[75%] mt-6 items-end">
+          <h1 className="text-white text-[36px] font-bold">87</h1>
+          <div className="flex mb-2">
+            <img
+              className="w-[10px] h-[5px] self-center"
+              src="../../images/icon-up.svg"
+              alt="a green arrow pointing up"
+            />
+            <h3 className="text-[#3eda82] font-medium ms-2 self-center">3%</h3>
+          </div>
+        </div>
+
+      </div>
+
+      <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 sm:mb-0 flex flex-col items-center hover:bg-[#384063] rounded-md">
+
+        <div className="flex w-[85%] justify-between sm:w-[75%] mt-6">
+          <p className="text-gray-400 font-bold">Likes</p>
+          <img src="../../images/icon-facebook.svg" alt="Facebook logo" />
+        </div>
+
+        <div className="flex w-[85%] justify-between sm:w-[75%] mt-6 items-end">
+          <h1 className="text-white text-[36px] font-bold">52</h1>
+          <div className="flex mb-2">
+            <img
+              className="w-[10px] h-[5px] self-center"
+              src="../../images/icon-down.svg"
+              alt="a green arrow pointing up"
+            />
+            <h3 className="text-[#dc414c] font-medium ms-2 self-center">2%</h3>
+          </div>
+        </div>
+
+      </div>
+
+      <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 sm:mb-0 flex flex-col items-center hover:bg-[#384063] rounded-md">
+
+        <div className="flex w-[85%] justify-between sm:w-[75%] mt-6">
+          <p className="text-gray-400 font-bold">Likes</p>
+          <img src="../../images/icon-instagram.svg" alt="Facebook logo" />
+        </div>
+
+        <div className="flex w-[85%] justify-between sm:w-[75%] mt-6 items-end">
+          <h1 className="text-white text-[36px] font-bold">5462</h1>
+          <div className="flex mb-2">
+            <img
+              className="w-[10px] h-[5px] self-center"
+              src="../../images/icon-up.svg"
+              alt="a green arrow pointing up"
+            />
+            <h3 className="text-[#3eda82] font-medium ms-2 self-center">2257%</h3>
+          </div>
+        </div>
+
+      </div>
+
+      <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 sm:mb-0 flex flex-col items-center hover:bg-[#384063] rounded-md">
+
+        <div className="flex w-[85%] justify-between sm:w-[75%] mt-6">
+          <p className="text-gray-400 font-bold">Profile Views</p>
+          <img src="../../images/icon-instagram.svg" alt="Facebook logo" />
+        </div>
+
+        <div className="flex w-[85%] justify-between sm:w-[75%] mt-6 items-end">
+          <h1 className="text-white text-[36px] font-bold">52k</h1>
+          <div className="flex mb-2">
+            <img
+              className="w-[10px] h-[5px] self-center"
+              src="../../images/icon-up.svg"
+              alt="a green arrow pointing up"
+            />
+            <h3 className="text-[#3eda82] font-medium ms-2 self-center">1375%</h3>
+          </div>
+        </div>
+
+      </div>
+
+
+      </div>
+      {/* Bottom cards second row */}
+      <div className="flex flex-col items-center sm:flex-row justify-between w-[90%] sm:w-full sm:mt-9">
+
+        <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 sm:mb-0 flex flex-col items-center hover:bg-[#384063] rounded-md">
+
+          <div className="flex w-[85%] justify-between sm:w-[75%] mt-6">
+            <p className="text-gray-400 font-bold">Retweets</p>
+            <img src="../../images/icon-twitter.svg" alt="Facebook logo" />
+          </div>
+
+          <div className="flex w-[85%] justify-between sm:w-[75%] mt-6 items-end">
+            <h1 className="text-white text-[36px] font-bold">117</h1>
+            <div className="flex mb-2">
+              <img
+                className="w-[10px] h-[5px] self-center"
+                src="../../images/icon-up.svg"
+                alt="a green arrow pointing up"
+              />
+              <h3 className="text-[#3eda82] font-medium ms-2 self-center">303%</h3>
+            </div>
+          </div>
+
+        </div>
+
+        <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 sm:mb-0 flex flex-col items-center hover:bg-[#384063] rounded-md">
+
+          <div className="flex w-[85%] justify-between sm:w-[75%] mt-6">
+            <p className="text-gray-400 font-bold">Likes</p>
+            <img src="../../images/icon-twitter.svg" alt="Facebook logo" />
+          </div>
+
+          <div className="flex w-[85%] justify-between sm:w-[75%] mt-6 items-end">
+            <h1 className="text-white text-[36px] font-bold">507</h1>
+            <div className="flex mb-2">
+              <img
+                className="w-[10px] h-[5px] self-center"
+                src="../../images/icon-up.svg"
+                alt="a green arrow pointing up"
+              />
+              <h3 className="text-[#3eda82] font-medium ms-2 self-center">553%</h3>
+            </div>
+          </div>
+
+        </div>
+
+        <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 sm:mb-0 flex flex-col items-center hover:bg-[#384063] rounded-md">
+
+          <div className="flex w-[85%] justify-between sm:w-[75%] mt-6">
+            <p className="text-gray-400 font-bold">Likes</p>
+            <img src="../../images/icon-youtube.svg" alt="Facebook logo" />
+          </div>
+
+          <div className="flex w-[85%] justify-between sm:w-[75%] mt-6 items-end">
+            <h1 className="text-white text-[36px] font-bold">107</h1>
+            <div className="flex mb-2">
+              <img
+                className="w-[10px] h-[5px] self-center"
+                src="../../images/icon-down.svg"
+                alt="a green arrow pointing up"
+              />
+              <h3 className="text-[#dc414c] font-medium ms-2 self-center">19%</h3>
+            </div>
+          </div>
+
+        </div>
+
+        <div className="h-[140px] sm:w-[270px] w-full bg-[#252a41] mb-6 sm:mb-0 flex flex-col items-center hover:bg-[#384063] rounded-md">
+
+          <div className="flex w-[85%] justify-between sm:w-[75%] mt-6">
+            <p className="text-gray-400 font-bold">Total Views</p>
+            <img src="../../images/icon-youtube.svg" alt="Facebook logo" />
+          </div>
+
+          <div className="flex w-[85%] justify-between sm:w-[75%] mt-6 items-end">
+            <h1 className="text-white text-[36px] font-bold">1407</h1>
+            <div className="flex mb-2">
+              <img
+                className="w-[10px] h-[5px] self-center"
+                src="../../images/icon-down.svg"
+                alt="a green arrow pointing up"
+              />
+              <h3 className="text-[#dc414c] font-medium ms-2 self-center">12%</h3>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+
     </>
   );
 };
