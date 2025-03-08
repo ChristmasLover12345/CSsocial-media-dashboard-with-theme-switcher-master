@@ -1,6 +1,78 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { FetchData } from '../Services/DataService'
 
 const Lightmode = () => {
+
+  
+
+  const[facebook1, setFacebook1] = useState("")
+   const[facebook2, setFacebook2] = useState("")
+   const[facebook3, setFacebook3] = useState("")
+   const[facebook4, setFacebook4] = useState("")
+   const[facebook5, setFacebook5] = useState("")
+   const[facebook6, setFacebook6] = useState("")
+ 
+   const[twitter1, setTwitter1] = useState("")
+   const[twitter2, setTwitter2] = useState("")
+   const[twitter3, setTwitter3] = useState("")
+   const[twitter4, setTwitter4] = useState("")
+   const[twitter5, setTwitter5] = useState("")
+   const[twitter6, setTwitter6] = useState("")
+ 
+   const[instagram1, setInstagram1] = useState("")
+   const[instagram2, setInstagram2] = useState("")
+   const[instagram3, setInstagram3] = useState("")
+   const[instagram4, setInstagram4] = useState("")
+   const[instagram5, setInstagram5] = useState("")
+   const[instagram6, setInstagram6] = useState("")
+ 
+   const[youtube1, setYoutube1] = useState("")
+   const[youtube2, setYoutube2] = useState("")
+   const[youtube3, setYoutube3] = useState("")
+   const[youtube4, setYoutube4] = useState("")
+   const[youtube5, setYoutube5] = useState("")
+   const[youtube6, setYoutube6] = useState("")
+   
+ 
+ 
+   useEffect( () => {
+ 
+     const SetTheData = async () =>{
+      const data = await FetchData()
+     setFacebook1(data[0].facebook[0])
+     setFacebook2(data[0].facebook[1])
+     setFacebook3(data[0].facebook[2])
+     setFacebook4(data[0].facebook[3])
+     setFacebook5(data[0].facebook[4])
+     setFacebook6(data[0].facebook[5])
+ 
+     setTwitter1(data[0].twitter[0])
+     setTwitter2(data[0].twitter[1])
+     setTwitter3(data[0].twitter[2])
+     setTwitter4(data[0].twitter[3])
+     setTwitter5(data[0].twitter[4])
+     setTwitter6(data[0].twitter[5])
+ 
+     setInstagram1(data[0].instagram[0])
+     setInstagram2(data[0].instagram[1])
+     setInstagram3(data[0].instagram[2])
+     setInstagram4(data[0].instagram[3])
+     setInstagram5(data[0].instagram[4])
+     setInstagram6(data[0].instagram[5])
+ 
+     setYoutube1(data[0].youtube[0])
+     setYoutube2(data[0].youtube[1])
+     setYoutube3(data[0].youtube[2])
+     setYoutube4(data[0].youtube[3])
+     setYoutube5(data[0].youtube[4])
+     setYoutube6(data[0].youtube[5]) 
+     }
+ 
+     
+     SetTheData()
+ 
+   },[])
+
   return (
     
     <>
@@ -13,7 +85,7 @@ const Lightmode = () => {
             <span className="text-[#63687e] ms-2"> @nathanf</span>
           </div>
 
-          <h1 className="text-[#1e202a] text-[60px] font-bold mb-0 p-0">1987</h1>
+          <h1 className="text-[#1e202a] text-[60px] font-bold mb-0 p-0">{facebook1}</h1>
           <h1 className="text-[#63687e] font-normal">F O L L O W E R S</h1>
 
           <div className="flex mt-6">
@@ -22,7 +94,7 @@ const Lightmode = () => {
               src="../../images/icon-up.svg"
               alt="a green arrow pointing up"
             />
-            <h3 className="text-[#3eda82] font-medium ms-2">12 Today</h3>
+            <h3 className="text-[#3eda82] font-medium ms-2">{facebook4}</h3>
           </div>
         </div>
 
@@ -33,7 +105,7 @@ const Lightmode = () => {
             <span className="text-[#63687e] ms-2"> @nathanf</span>
           </div>
 
-          <h1 className="text-[#1e202a] text-[60px] font-bold mb-0 p-0">1044</h1>
+          <h1 className="text-[#1e202a] text-[60px] font-bold mb-0 p-0">{twitter1}</h1>
           <h1 className="text-[#63687e] font-normal">F O L L O W E R S</h1>
 
           <div className="flex mt-6">
@@ -42,7 +114,7 @@ const Lightmode = () => {
               src="../../images/icon-up.svg"
               alt="a green arrow pointing up"
             />
-            <h3 className="text-[#3eda82] font-medium ms-2">99 Today</h3>
+            <h3 className="text-[#3eda82] font-medium ms-2">{twitter4}</h3>
           </div>
         </div>
 
@@ -54,7 +126,7 @@ const Lightmode = () => {
             <span className="text-[#63687e] ms-2"> @realnathanf</span>
           </div>
 
-          <h1 className="text-[#1e202a] text-[60px] font-bold mb-0 p-0">11k</h1>
+          <h1 className="text-[#1e202a] text-[60px] font-bold mb-0 p-0">{instagram1}</h1>
           <h1 className="text-[#63687e] font-normal">F O L L O W E R S</h1>
 
           <div className="flex mt-6">
@@ -63,7 +135,7 @@ const Lightmode = () => {
               src="../../images/icon-up.svg"
               alt="a green arrow pointing up"
             />
-            <h3 className="text-[#3eda82] font-medium ms-2">1099 Today</h3>
+            <h3 className="text-[#3eda82] font-medium ms-2">{instagram4}</h3>
           </div>
         </div>
         </div>
@@ -75,7 +147,7 @@ const Lightmode = () => {
             <span className="text-[#63687e] ms-2"> @nathanf</span>
           </div>
 
-          <h1 className="text-[#1e202a] text-[60px] font-bold mb-0 p-0">8239</h1>
+          <h1 className="text-[#1e202a] text-[60px] font-bold mb-0 p-0">{youtube1}</h1>
           <h1 className="text-[#63687e] font-normal">S U B S C R I B E R S</h1>
 
           <div className="flex mt-6">
@@ -84,7 +156,7 @@ const Lightmode = () => {
               src="../../images/icon-down.svg"
               alt="a green arrow pointing up"
             />
-            <h3 className="text-[#dc414c] font-medium ms-2">99 Today</h3>
+            <h3 className="text-[#dc414c] font-medium ms-2">{youtube4}</h3>
           </div>
         </div>
 
@@ -106,14 +178,14 @@ const Lightmode = () => {
         </div>
 
         <div className="flex w-[85%] justify-between sm:w-[75%] mt-6 items-end">
-          <h1 className="text-[#1e202a] text-[36px] font-bold">87</h1>
+          <h1 className="text-[#1e202a] text-[36px] font-bold">{facebook2}</h1>
           <div className="flex mb-2">
             <img
               className="w-[10px] h-[5px] self-center"
               src="../../images/icon-up.svg"
               alt="a green arrow pointing up"
             />
-            <h3 className="text-[#3eda82] font-medium ms-2 self-center">3%</h3>
+            <h3 className="text-[#3eda82] font-medium ms-2 self-center">{facebook5}</h3>
           </div>
         </div>
 
@@ -127,14 +199,14 @@ const Lightmode = () => {
         </div>
 
         <div className="flex w-[85%] justify-between sm:w-[75%] mt-6 items-end">
-          <h1 className="text-[#1e202a] text-[36px] font-bold">52</h1>
+          <h1 className="text-[#1e202a] text-[36px] font-bold">{facebook3}</h1>
           <div className="flex mb-2">
             <img
               className="w-[10px] h-[5px] self-center"
               src="../../images/icon-down.svg"
               alt="a green arrow pointing up"
             />
-            <h3 className="text-[#dc414c] font-medium ms-2 self-center">2%</h3>
+            <h3 className="text-[#dc414c] font-medium ms-2 self-center">{facebook6}</h3>
           </div>
         </div>
 
@@ -148,14 +220,14 @@ const Lightmode = () => {
         </div>
 
         <div className="flex w-[85%] justify-between sm:w-[75%] mt-6 items-end">
-          <h1 className="text-[#1e202a] text-[36px] font-bold">5462</h1>
+          <h1 className="text-[#1e202a] text-[36px] font-bold">{instagram2}</h1>
           <div className="flex mb-2">
             <img
               className="w-[10px] h-[5px] self-center"
               src="../../images/icon-up.svg"
               alt="a green arrow pointing up"
             />
-            <h3 className="text-[#3eda82] font-medium ms-2 self-center">2257%</h3>
+            <h3 className="text-[#3eda82] font-medium ms-2 self-center">{instagram5}</h3>
           </div>
         </div>
 
@@ -169,14 +241,14 @@ const Lightmode = () => {
         </div>
 
         <div className="flex w-[85%] justify-between sm:w-[75%] mt-6 items-end">
-          <h1 className="text-[#1e202a] text-[36px] font-bold">52k</h1>
+          <h1 className="text-[#1e202a] text-[36px] font-bold">{instagram3}</h1>
           <div className="flex mb-2">
             <img
               className="w-[10px] h-[5px] self-center"
               src="../../images/icon-up.svg"
               alt="a green arrow pointing up"
             />
-            <h3 className="text-[#3eda82] font-medium ms-2 self-center">1375%</h3>
+            <h3 className="text-[#3eda82] font-medium ms-2 self-center">{instagram6}</h3>
           </div>
         </div>
 
@@ -195,14 +267,14 @@ const Lightmode = () => {
           </div>
 
           <div className="flex w-[85%] justify-between sm:w-[75%] mt-6 items-end">
-            <h1 className="text-[#1e202a] text-[36px] font-bold">117</h1>
+            <h1 className="text-[#1e202a] text-[36px] font-bold">{twitter2}</h1>
             <div className="flex mb-2">
               <img
                 className="w-[10px] h-[5px] self-center"
                 src="../../images/icon-up.svg"
                 alt="a green arrow pointing up"
               />
-              <h3 className="text-[#3eda82] font-medium ms-2 self-center">303%</h3>
+              <h3 className="text-[#3eda82] font-medium ms-2 self-center">{twitter5}</h3>
             </div>
           </div>
 
@@ -216,14 +288,14 @@ const Lightmode = () => {
           </div>
 
           <div className="flex w-[85%] justify-between sm:w-[75%] mt-6 items-end">
-            <h1 className="text-[#1e202a] text-[36px] font-bold">507</h1>
+            <h1 className="text-[#1e202a] text-[36px] font-bold">{twitter3}</h1>
             <div className="flex mb-2">
               <img
                 className="w-[10px] h-[5px] self-center"
                 src="../../images/icon-up.svg"
                 alt="a green arrow pointing up"
               />
-              <h3 className="text-[#3eda82] font-medium ms-2 self-center">553%</h3>
+              <h3 className="text-[#3eda82] font-medium ms-2 self-center">{twitter6}</h3>
             </div>
           </div>
 
@@ -237,14 +309,14 @@ const Lightmode = () => {
           </div>
 
           <div className="flex w-[85%] justify-between sm:w-[75%] mt-6 items-end">
-            <h1 className="text-[#1e202a] text-[36px] font-bold">107</h1>
+            <h1 className="text-[#1e202a] text-[36px] font-bold">{youtube2}</h1>
             <div className="flex mb-2">
               <img
                 className="w-[10px] h-[5px] self-center"
                 src="../../images/icon-down.svg"
                 alt="a green arrow pointing up"
               />
-              <h3 className="text-[#dc414c] font-medium ms-2 self-center">19%</h3>
+              <h3 className="text-[#dc414c] font-medium ms-2 self-center">{youtube6}</h3>
             </div>
           </div>
 
@@ -258,14 +330,14 @@ const Lightmode = () => {
           </div>
 
           <div className="flex w-[85%] justify-between sm:w-[75%] mt-6 items-end">
-            <h1 className="text-[#1e202a] text-[36px] font-bold">1407</h1>
+            <h1 className="text-[#1e202a] text-[36px] font-bold">{youtube3}</h1>
             <div className="flex mb-2">
               <img
                 className="w-[10px] h-[5px] self-center"
                 src="../../images/icon-down.svg"
                 alt="a green arrow pointing up"
               />
-              <h3 className="text-[#dc414c] font-medium ms-2 self-center">12%</h3>
+              <h3 className="text-[#dc414c] font-medium ms-2 self-center">{youtube6}</h3>
             </div>
           </div>
 
